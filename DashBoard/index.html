@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./CSS/main.css" rel="stylesheet" />
+    <link href="./CSS/all.css" rel="stylesheet" />
+    <title>Order List</title>
+  </head>
+  <body>
+    <main>
+      <h1>Order List</h1>
+      <section class="filter-bar">
+
+        <i class="fas fa-filter filter-el"></i>
+        <span class="filter-el"> Filter By</span>
+        <!-- Date  -->
+        <div id="Date" class="filter-item filter-el">
+           <span class="text"> Date</span>
+           <i class="fas fa-angle-down"></i>
+        </div>
+        <!-- Order Type -->
+        <div id="Order-Type" class="filter-item filter-el">
+            <span  class="text">Order Type</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+        <!-- Order Popup -->
+         <div class="Type popup filter-el">
+            <h2 class="popup-title">Select Order Type</h2>
+            <div class="status-options">
+              <button id="Electric" class="status-option">Electric</button>
+              <button id="Medicine" class="status-option">Medicine</button>
+              <button id="Grocery" class="status-option">Grocery</button>
+            </div>
+            <button id="Apply-Type" class="apply-button">Apply</button>
+          </div>
+        <!-- Order Status  -->
+        <div id="Order-Status" class="filter-item filter-el">
+            <span class="text">Order Status</span>
+            <i class="fas fa-angle-down"></i>
+         </div>
+        <!-- Status Popup -->
+        <div class="status popup filter-el">
+          <h2 class="popup-title">Select Order Status</h2>
+          <div class="status-options">
+            <button id="All Status" class="status-option">All Status</button>
+            <button id="Completed" class="status-option">Completed</button>
+            <button id="Processing" class="status-option">Processing</button>
+            <button id="On Hold" class="status-option">On Hold</button>
+            <button id="Rejected" class="status-option">Rejected</button>
+            <button id="In Transit" class="status-option">In Transit</button>
+          </div>
+          <button id="Apply-Status" class="apply-button">Apply</button>
+        </div>
+        <!-- Reset Filter Button -->
+        <div class="reset-filter filter-el Reset">
+          <i class="fas fa-sync-alt"></i>
+          <span>Reset Filter</span>
+        </div>
+      </section>
+
+      <!-- TABLE -->
+      <section id="table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>NAME</th>
+              <th>ADDRESS</th>
+              <th>DATE</th>
+              <th>TYPE</th>
+              <th>STATUS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td>00001</td>
+              <td>Alan Cain</td>
+              <td>245 Alan Cain</td>
+              <td>14 Feb 2019</td>
+              <td>Mobile</td>
+              <td><span class="Status">Completed</span></td>
+            </tr>
+            <tr>
+                <td>00001</td>
+                <td>Alan Cain</td>
+                <td>245 Alan Cain</td>
+                <td>14 Feb 2019</td>
+                <td>Mobile</td>
+                <td><span class="Status">Completed</span></td>
+              </tr>            <tr>
+                <td>00001</td>
+                <td>Alan Cain</td>
+                <td>245 Alan Cain</td>
+                <td>14 Feb 2019</td>
+                <td>Mobile</td>
+                <td><span class="Status">Completed</span></td>
+              </tr> -->
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="./JS/main.js"></script>
+  </body>
+</html>
