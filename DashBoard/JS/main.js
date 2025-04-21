@@ -116,6 +116,7 @@ function filtered(property, value) {
   let filtered = allData.filter(el => el[property] === value);
   renderData(filtered);
   orderStatusPopup.style.display = "none";
+  orderTypePopup.style.display = "none";
 }
 
 // status filters
