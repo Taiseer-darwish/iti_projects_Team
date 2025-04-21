@@ -21,7 +21,7 @@
   }  
   .filter-bar{
     display: flex;
-    padding: 0px 20px;
+    padding: 0px 10px;
     background-color: #f9f9f9;
     box-shadow: 2px 2px 5px 3px #c6c6c6;
     border-radius: 10px;
@@ -37,10 +37,23 @@
     align-items: center;
   }
   .filter-bar .filter-el {
-    padding: 10px 15px;
+    padding: 8px 10px;
     border-right: solid 0.5px #5353537e;
   }
-  
+  #date-input{
+    width: 40%;
+    outline: none;
+    margin:0 5px;
+  }
+  #search{
+    font-size: 13px;
+    background-color: #FF7A45;
+    border: none;
+    padding: 5px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
   .filter-bar .Reset {
     border-right: none;
     color: #fe2f2fda;
@@ -157,11 +170,13 @@
   }
   
   .status {
-    background-color: #ec6851;
     padding: 4px 18px;
     border-radius: 6px;
     color: #fff;
-    width:fit-content;
     font-size: 12px;
+    min-width: 80px;
+    text-align: center;
   }
+  
+  
   

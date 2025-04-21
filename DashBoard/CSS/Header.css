@@ -1,0 +1,213 @@
+:root {
+    /* Color */
+    --color-background: #F3F3F9;
+    --color-white: #fff;
+    --color-text-primary: #333;
+    --color-text-secondary: #878a99;
+    --color-border: #878a99;
+    
+    /* Spacing  */
+    --spacing-xs: 5px;
+    --spacing-sm: 10px;
+    --spacing-md: 15px;
+    --spacing-lg: 20px;
+    --spacing-xl: 25px;
+    
+    /* Font Size  */
+    --font-size-xs: 11px;
+    --font-size-sm: 12px;
+    --font-size-md: 13px;
+    --font-size-lg: 15px;
+    --font-size-xl: 22px;
+    
+    /* Layout  */
+    --header-height: 13vh;
+    --border-radius: 5px;
+    }
+    
+  *, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    
+    body {
+    background-color: var(--color-background);
+    }
+    
+  /* Navbar Styles */
+    .navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    }
+    
+    .navbar__container {
+    background-color: var(--color-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 var(--spacing-lg);
+    border-bottom: 1px solid var(--color-border);
+    }
+    
+    .navbar__left {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    }
+    
+    .navbar__icon {
+    font-size: var(--font-size-xl);
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    }
+    
+    .navbar__search {
+    position: relative;
+    padding: var(--spacing-sm) var(--spacing-xl);
+    background-color: var(--color-background);
+    border-radius: var(--border-radius);
+  }
+  
+  .navbar__search-input {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: transparent;
+    color: var(--color-text-secondary);
+    border: 0;
+    outline: 0;
+    width: 200px;
+  }
+  
+  .navbar__search-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: var(--spacing-md);
+    font-size: var(--font-size-md);
+    color: var(--color-text-secondary);
+  }
+  
+  .navbar__right {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  .navbar__flag img {
+    height: 20px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+  }
+
+  .navbar__user {
+    background-color: var(--color-background);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md) var(--spacing-xl);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+  }
+  
+  .navbar__user-avatar img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .navbar__user-name {
+    font-size: var(--font-size-md);
+    margin: 0;
+  }
+  
+  .navbar__user-role {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+  }
+  
+  /* Header Styles */
+  .header {
+    margin-top: var(--navbar-height);
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-border);
+  }
+  
+  .header__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+    padding: var(--spacing-sm) var(--spacing-lg);
+  }
+  
+  .header__title {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-primary);
+  }
+  
+  .header__breadcrumb a {
+    text-decoration: none;
+    color: var(--color-text-primary);
+    transition: border-bottom 0.2s ;
+  }
+  
+  .header__breadcrumb a:hover {
+    border-bottom: 1px solid var(--color-text-primary);
+  }
+  
+  .header__breadcrumb-item {
+    font-size: var(--font-size-md);
+  }
+  
+  .header__breadcrumb-separator {
+    margin: 0 var(--spacing-xs);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+  }
+  .navbar__icon-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .navbar__badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    min-width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: var(--color-white);
+    font-size: var(--font-size-xs);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+  }
+  
+  .badge--blue {
+    background-color: #1890ff;
+  }
+  
+  .badge--orange {
+    background-color: #ff7a45;
+  }
+  .navbar__badge.hidden {
+    display: none;
+  }
+
+  /* Main Content Area */
+  .main-content {
+    padding: var(--spacing-lg);
+  }
+
+
+
+ 

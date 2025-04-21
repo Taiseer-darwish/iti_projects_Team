@@ -5,102 +5,165 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./CSS/main.css" rel="stylesheet" />
     <link href="./CSS/all.css" rel="stylesheet" />
+    <link href="./CSS/Header.css" rel="stylesheet" />
     <title>Order List</title>
   </head>
   <body>
-    <main>
-      <h1>Order List</h1>
-      <section class="filter-bar">
-
-        <i class="fas fa-filter filter-el"></i>
-        <span class="filter-el"> Filter By</span>
-        <!-- Date  -->
-        <div id="Date" class="filter-item filter-el">
-           <span class="text"> Date</span>
-           <i class="fas fa-angle-down"></i>
-        </div>
-        <!-- Order Type -->
-        <div id="Order-Type" class="filter-item filter-el">
-            <span  class="text">Order Type</span>
-            <i class="fas fa-angle-down"></i>
-         </div>
-        <!-- Order Popup -->
-         <div class="Type popup filter-el">
-            <h2 class="popup-title">Select Order Type</h2>
-            <div class="status-options">
-              <button id="Electric" class="status-option">Electric</button>
-              <button id="Medicine" class="status-option">Medicine</button>
-              <button id="Grocery" class="status-option">Grocery</button>
+    <div class="page-wrapper">
+      <nav class="navbar">
+        <div class="navbar__container">
+          <div class="navbar__left">
+            <i
+              class="navbar__icon fa-solid fa-arrow-right-from-bracket"
+              title="Exit Dashboard"
+            ></i>
+            <div class="navbar__search">
+              <input
+                type="text"
+                class="navbar__search-input"
+                placeholder="Search..."
+                aria-label="Search"
+              />
+              <i class="navbar__search-icon fa fa-search" title="Search"></i>
             </div>
-            <button id="Apply-Type" class="apply-button">Apply</button>
           </div>
-        <!-- Order Status  -->
-        <div id="Order-Status" class="filter-item filter-el">
-            <span class="text">Order Status</span>
-            <i class="fas fa-angle-down"></i>
-         </div>
-        <!-- Status Popup -->
-        <div class="status popup filter-el">
-          <h2 class="popup-title">Select Order Status</h2>
-          <div class="status-options">
-            <button id="All Status" class="status-option">All Status</button>
-            <button id="Completed" class="status-option">Completed</button>
-            <button id="Processing" class="status-option">Processing</button>
-            <button id="On Hold" class="status-option">On Hold</button>
-            <button id="Rejected" class="status-option">Rejected</button>
-            <button id="In Transit" class="status-option">In Transit</button>
+          <div class="navbar__right">
+            <div class="navbar__flag">
+              <img
+                src="Assets/Images/Flags/us.svg"
+                alt="United States flag"
+                title="Language: English"
+              />
+            </div>
+            <i
+              class="navbar__icon fa-solid fa-boxes-stacked"
+              title="Web Apps"
+            ></i>
+            <div class="navbar__icon-container">
+              <i
+                class="navbar__icon fa-solid fa-basket-shopping"
+                title="My Cart"
+              ></i>
+              <span class="navbar__badge badge--blue" id="store-count">5</span>
+            </div>
+            <i class="navbar__icon fa-solid fa-expand" title="Expand"></i>
+            <i class="navbar__icon fa-regular fa-moon" title="Dark Mode"></i>
+            <div class="navbar__icon-container">
+              <i
+                class="navbar__icon fa-regular fa-bell"
+                title="Notifications"
+              ></i>
+              <span class="navbar__badge badge--orange" id="notification-count"
+                >3</span
+              >
+            </div>
+            <div class="navbar__user" title="User profile">
+              <div class="navbar__user-avatar">
+                <img
+                  src="Assets/Images/Avatar/avatar-8.jpg"
+                  alt="Seth Adam profile picture"
+                />
+              </div>
+              <div class="navbar__user-info">
+                <h6 class="navbar__user-name">Seth Adam</h6>
+                <span class="navbar__user-role">Founder</span>
+              </div>
+            </div>
           </div>
-          <button id="Apply-Status" class="apply-button">Apply</button>
         </div>
-        <!-- Reset Filter Button -->
-        <div class="reset-filter filter-el Reset">
-          <i class="fas fa-sync-alt"></i>
-          <span>Reset Filter</span>
+      </nav>
+      <header class="header">
+        <div class="header__content">
+          <h2 class="header__title">CRM</h2>
+          <div class="header__breadcrumb" aria-label="Breadcrumb">
+            <span class="header__breadcrumb-item"
+              ><a href="#" title="Go to Dashboard">Dashboard</a></span
+            >
+            <i
+              class="header__breadcrumb-separator fas fa-angles-right"
+              aria-hidden="true"
+            ></i>
+            <span class="header__breadcrumb-item">CRM</span>
+          </div>
         </div>
-      </section>
+      </header>
+      <main class="main-content">
+        <section class="Order List">
+          <h1>Order List</h1>
+          <section class="filter-bar">
+            <i class="fas fa-filter filter-el"></i>
+            <span class="filter-el"> Filter By</span>
+            <!-- Date  -->
+            <div id="Date" class="filter-item filter-el">
+              <label for="date">Date :</label>
+              <input type="text" id="date-input" />
+              <button id="search">Search</button>
+            </div>
+            <!-- Order Type -->
+            <div id="Order-Type" class="filter-item filter-el">
+              <span class="text">Order Type</span>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <!-- Order Popup -->
+            <div class="Type popup filter-el">
+              <h2 class="popup-title">Select Order Type</h2>
+              <div class="status-options">
+                <button id="Electric" class="status-option">Electric</button>
+                <button id="Medicine" class="status-option">Medicine</button>
+                <button id="Grocery" class="status-option">Grocery</button>
+              </div>
+              <!-- <button id="Apply-Type" class="apply-button">Apply</button> -->
+            </div>
+            <!-- Order Status  -->
+            <div id="Order-Status" class="filter-item filter-el">
+              <span class="text">Order Status</span>
+              <i class="fas fa-angle-down"></i>
+            </div>
+            <!-- Status Popup -->
+            <div class="status popup filter-el">
+              <h2 class="popup-title">Select Order Status</h2>
+              <div class="status-options">
+                <button id="All Status" class="status-option">
+                  All Status
+                </button>
+                <button id="Completed" class="status-option">Completed</button>
+                <button id="Processing" class="status-option">
+                  Processing
+                </button>
+                <button id="On Hold" class="status-option">On Hold</button>
+                <button id="Rejected" class="status-option">Rejected</button>
+                <button id="In Transit" class="status-option">
+                  In Transit
+                </button>
+              </div>
+              <!-- <button id="Apply-Status" class="apply-button">Apply</button> -->
+            </div>
+            <!-- Reset Filter Button -->
+            <div class="reset-filter filter-el Reset">
+              <i class="fas fa-sync-alt"></i>
+              <span>Reset Filter</span>
+            </div>
+          </section>
 
-      <!-- TABLE -->
-      <section id="table">
-        <table>
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>NAME</th>
-              <th>ADDRESS</th>
-              <th>DATE</th>
-              <th>TYPE</th>
-              <th>STATUS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- <tr>
-              <td>00001</td>
-              <td>Alan Cain</td>
-              <td>245 Alan Cain</td>
-              <td>14 Feb 2019</td>
-              <td>Mobile</td>
-              <td><span class="Status">Completed</span></td>
-            </tr>
-            <tr>
-                <td>00001</td>
-                <td>Alan Cain</td>
-                <td>245 Alan Cain</td>
-                <td>14 Feb 2019</td>
-                <td>Mobile</td>
-                <td><span class="Status">Completed</span></td>
-              </tr>            <tr>
-                <td>00001</td>
-                <td>Alan Cain</td>
-                <td>245 Alan Cain</td>
-                <td>14 Feb 2019</td>
-                <td>Mobile</td>
-                <td><span class="Status">Completed</span></td>
-              </tr> -->
-          </tbody>
-        </table>
-      </section>
-    </main>
-
+          <!-- TABLE -->
+          <section id="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>NAME</th>
+                  <th>ADDRESS</th>
+                  <th>DATE</th>
+                  <th>TYPE</th>
+                  <th>STATUS</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </section>
+        </section>
+      </main>
+    </div>
     <script src="./JS/main.js"></script>
   </body>
 </html>
